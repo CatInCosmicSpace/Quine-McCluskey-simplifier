@@ -1,0 +1,149 @@
+\hypertarget{classlog__expr}{}\section{Класс log\+\_\+expr}
+\label{classlog__expr}\index{log\+\_\+expr@{log\+\_\+expr}}
+
+
+Парсер логических формул.  
+
+
+
+
+{\ttfamily \#include $<$Quine\+\_\+\+Mc\+Cluskey\+\_\+\+Simplifier.\+hpp$>$}
+
+\subsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structlog__expr_1_1exp__node}{exp\+\_\+node}
+\begin{DoxyCompactList}\small\item\em Узел дерева \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlog__expr_a3227eb98488a3c821152208b233e53f0}{log\+\_\+expr} (const std\+::string \&)
+\item 
+auto \hyperlink{classlog__expr_ad05d17c0af134cc5d026e909ca73bc7a}{print} (std\+::ostream \&os=std\+::cout) const -\/$>$ void
+\item 
+\hyperlink{classlog__expr_a311a852d7b7dbca17d1f2f612445fa01}{$\sim$log\+\_\+expr} ()
+\end{DoxyCompactItemize}
+\subsection*{Закрытые типы}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classlog__expr_abfd63d60441373c4017ef250008102d9}{exp\+\_\+type} \{ \hyperlink{classlog__expr_abfd63d60441373c4017ef250008102d9a96bb6b9912d801ae7756d49364d0c92e}{e\+\_\+root}, 
+\hyperlink{classlog__expr_abfd63d60441373c4017ef250008102d9a767d2708549a716860b55a7895abc3a7}{e\+\_\+node}, 
+\hyperlink{classlog__expr_abfd63d60441373c4017ef250008102d9ad402859556c53152f1d12f057e53ce1d}{e\+\_\+subnode}, 
+\hyperlink{classlog__expr_abfd63d60441373c4017ef250008102d9aa573107af28c7da49bfe39a00efbe71e}{e\+\_\+leaf}
+ \}
+\item 
+enum \hyperlink{classlog__expr_acef7af5805dc4da8b53854ae7e458351}{op\+\_\+type} \{ \hyperlink{classlog__expr_acef7af5805dc4da8b53854ae7e458351a3a0a1f5c5bab8a1cb145b489e2111545}{op\+\_\+null}, 
+\hyperlink{classlog__expr_acef7af5805dc4da8b53854ae7e458351a9e4c9629f55a38eb1135f206cf3aa6ed}{op\+\_\+and}, 
+\hyperlink{classlog__expr_acef7af5805dc4da8b53854ae7e458351a89738cbd930b0bdc5b8a45376dc2da46}{op\+\_\+or}, 
+\hyperlink{classlog__expr_acef7af5805dc4da8b53854ae7e458351aa568d5cf7175023125fbf7ed7b4ad92b}{op\+\_\+not}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classlog__expr_a9390f80da7f2b5ca3a7023ec76ecf2cd}{ids\+\_\+}
+\item 
+\hyperlink{structlog__expr_1_1exp__node}{exp\+\_\+node} $\ast$ \hyperlink{classlog__expr_a3497df2d3c87e5358c39329fcd9c1853}{root\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Парсер логических формул. 
+
+Данный класс позволяет получить вектор функции, заданной формулой. Нужен для дальнейшей работы класса Quine\+\_\+\+Mc\+Cluskey\+\_\+\+Simlifier
+
+Октябрь-\/ноябрь 2017 года. 
+
+\subsection{Перечисления}
+\mbox{\Hypertarget{classlog__expr_abfd63d60441373c4017ef250008102d9}\label{classlog__expr_abfd63d60441373c4017ef250008102d9}} 
+\index{log\+\_\+expr@{log\+\_\+expr}!exp\+\_\+type@{exp\+\_\+type}}
+\index{exp\+\_\+type@{exp\+\_\+type}!log\+\_\+expr@{log\+\_\+expr}}
+\subsubsection{\texorpdfstring{exp\+\_\+type}{exp\_type}}
+{\footnotesize\ttfamily enum \hyperlink{classlog__expr_abfd63d60441373c4017ef250008102d9}{log\+\_\+expr\+::exp\+\_\+type}\hspace{0.3cm}{\ttfamily [private]}}
+
+Для типов узлов \begin{DoxyEnumFields}{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+\_\+root@{e\+\_\+root}!log\+\_\+expr@{log\+\_\+expr}}\index{log\+\_\+expr@{log\+\_\+expr}!e\+\_\+root@{e\+\_\+root}}}\mbox{\Hypertarget{classlog__expr_abfd63d60441373c4017ef250008102d9a96bb6b9912d801ae7756d49364d0c92e}\label{classlog__expr_abfd63d60441373c4017ef250008102d9a96bb6b9912d801ae7756d49364d0c92e}} 
+e\+\_\+root&Корень дерева \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+\_\+node@{e\+\_\+node}!log\+\_\+expr@{log\+\_\+expr}}\index{log\+\_\+expr@{log\+\_\+expr}!e\+\_\+node@{e\+\_\+node}}}\mbox{\Hypertarget{classlog__expr_abfd63d60441373c4017ef250008102d9a767d2708549a716860b55a7895abc3a7}\label{classlog__expr_abfd63d60441373c4017ef250008102d9a767d2708549a716860b55a7895abc3a7}} 
+e\+\_\+node&Обычный узел \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+\_\+subnode@{e\+\_\+subnode}!log\+\_\+expr@{log\+\_\+expr}}\index{log\+\_\+expr@{log\+\_\+expr}!e\+\_\+subnode@{e\+\_\+subnode}}}\mbox{\Hypertarget{classlog__expr_abfd63d60441373c4017ef250008102d9ad402859556c53152f1d12f057e53ce1d}\label{classlog__expr_abfd63d60441373c4017ef250008102d9ad402859556c53152f1d12f057e53ce1d}} 
+e\+\_\+subnode&Узел, представляющий собой выржание в скобке \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+\_\+leaf@{e\+\_\+leaf}!log\+\_\+expr@{log\+\_\+expr}}\index{log\+\_\+expr@{log\+\_\+expr}!e\+\_\+leaf@{e\+\_\+leaf}}}\mbox{\Hypertarget{classlog__expr_abfd63d60441373c4017ef250008102d9aa573107af28c7da49bfe39a00efbe71e}\label{classlog__expr_abfd63d60441373c4017ef250008102d9aa573107af28c7da49bfe39a00efbe71e}} 
+e\+\_\+leaf&Лист, содержит не фиктивное поле data \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{classlog__expr_acef7af5805dc4da8b53854ae7e458351}\label{classlog__expr_acef7af5805dc4da8b53854ae7e458351}} 
+\index{log\+\_\+expr@{log\+\_\+expr}!op\+\_\+type@{op\+\_\+type}}
+\index{op\+\_\+type@{op\+\_\+type}!log\+\_\+expr@{log\+\_\+expr}}
+\subsubsection{\texorpdfstring{op\+\_\+type}{op\_type}}
+{\footnotesize\ttfamily enum \hyperlink{classlog__expr_acef7af5805dc4da8b53854ae7e458351}{log\+\_\+expr\+::op\+\_\+type}\hspace{0.3cm}{\ttfamily [private]}}
+
+Представляет собой операцию между двумя операндами \begin{DoxyEnumFields}{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{op\+\_\+null@{op\+\_\+null}!log\+\_\+expr@{log\+\_\+expr}}\index{log\+\_\+expr@{log\+\_\+expr}!op\+\_\+null@{op\+\_\+null}}}\mbox{\Hypertarget{classlog__expr_acef7af5805dc4da8b53854ae7e458351a3a0a1f5c5bab8a1cb145b489e2111545}\label{classlog__expr_acef7af5805dc4da8b53854ae7e458351a3a0a1f5c5bab8a1cb145b489e2111545}} 
+op\+\_\+null&Фикитивная операция. Например, если все выжение -\/ это отрицание одной переменной, т.\+е. !a1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{op\+\_\+and@{op\+\_\+and}!log\+\_\+expr@{log\+\_\+expr}}\index{log\+\_\+expr@{log\+\_\+expr}!op\+\_\+and@{op\+\_\+and}}}\mbox{\Hypertarget{classlog__expr_acef7af5805dc4da8b53854ae7e458351a9e4c9629f55a38eb1135f206cf3aa6ed}\label{classlog__expr_acef7af5805dc4da8b53854ae7e458351a9e4c9629f55a38eb1135f206cf3aa6ed}} 
+op\+\_\+and&Операция И \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{op\+\_\+or@{op\+\_\+or}!log\+\_\+expr@{log\+\_\+expr}}\index{log\+\_\+expr@{log\+\_\+expr}!op\+\_\+or@{op\+\_\+or}}}\mbox{\Hypertarget{classlog__expr_acef7af5805dc4da8b53854ae7e458351a89738cbd930b0bdc5b8a45376dc2da46}\label{classlog__expr_acef7af5805dc4da8b53854ae7e458351a89738cbd930b0bdc5b8a45376dc2da46}} 
+op\+\_\+or&Операция ИЛИ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{op\+\_\+not@{op\+\_\+not}!log\+\_\+expr@{log\+\_\+expr}}\index{log\+\_\+expr@{log\+\_\+expr}!op\+\_\+not@{op\+\_\+not}}}\mbox{\Hypertarget{classlog__expr_acef7af5805dc4da8b53854ae7e458351aa568d5cf7175023125fbf7ed7b4ad92b}\label{classlog__expr_acef7af5805dc4da8b53854ae7e458351aa568d5cf7175023125fbf7ed7b4ad92b}} 
+op\+\_\+not&Операция НЕ. Создается отдельный узел, где first = nullptr, а second -\/ аргумент операции НЕ \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Конструктор(ы)}
+\mbox{\Hypertarget{classlog__expr_a3227eb98488a3c821152208b233e53f0}\label{classlog__expr_a3227eb98488a3c821152208b233e53f0}} 
+\index{log\+\_\+expr@{log\+\_\+expr}!log\+\_\+expr@{log\+\_\+expr}}
+\index{log\+\_\+expr@{log\+\_\+expr}!log\+\_\+expr@{log\+\_\+expr}}
+\subsubsection{\texorpdfstring{log\+\_\+expr()}{log\_expr()}}
+{\footnotesize\ttfamily log\+\_\+expr\+::log\+\_\+expr (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+Конструктор, строит дерево по переданной строке \mbox{\Hypertarget{classlog__expr_a311a852d7b7dbca17d1f2f612445fa01}\label{classlog__expr_a311a852d7b7dbca17d1f2f612445fa01}} 
+\index{log\+\_\+expr@{log\+\_\+expr}!````~log\+\_\+expr@{$\sim$log\+\_\+expr}}
+\index{````~log\+\_\+expr@{$\sim$log\+\_\+expr}!log\+\_\+expr@{log\+\_\+expr}}
+\subsubsection{\texorpdfstring{$\sim$log\+\_\+expr()}{~log\_expr()}}
+{\footnotesize\ttfamily log\+\_\+expr\+::$\sim$log\+\_\+expr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Деструктор. Здесь тоже ничего необычного, простое освобождение памяти, выделенной в под root\+\_\+ 
+
+\subsection{Методы}
+\mbox{\Hypertarget{classlog__expr_ad05d17c0af134cc5d026e909ca73bc7a}\label{classlog__expr_ad05d17c0af134cc5d026e909ca73bc7a}} 
+\index{log\+\_\+expr@{log\+\_\+expr}!print@{print}}
+\index{print@{print}!log\+\_\+expr@{log\+\_\+expr}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily auto log\+\_\+expr\+::print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os = {\ttfamily std\+:\+:cout} }\end{DoxyParamCaption}) const -\/$>$ void}
+
+Вывод полученного из логического выражения в поток os 
+
+\subsection{Данные класса}
+\mbox{\Hypertarget{classlog__expr_a9390f80da7f2b5ca3a7023ec76ecf2cd}\label{classlog__expr_a9390f80da7f2b5ca3a7023ec76ecf2cd}} 
+\index{log\+\_\+expr@{log\+\_\+expr}!ids\+\_\+@{ids\+\_\+}}
+\index{ids\+\_\+@{ids\+\_\+}!log\+\_\+expr@{log\+\_\+expr}}
+\subsubsection{\texorpdfstring{ids\+\_\+}{ids\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ log\+\_\+expr\+::ids\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlog__expr_a3497df2d3c87e5358c39329fcd9c1853}\label{classlog__expr_a3497df2d3c87e5358c39329fcd9c1853}} 
+\index{log\+\_\+expr@{log\+\_\+expr}!root\+\_\+@{root\+\_\+}}
+\index{root\+\_\+@{root\+\_\+}!log\+\_\+expr@{log\+\_\+expr}}
+\subsubsection{\texorpdfstring{root\+\_\+}{root\_}}
+{\footnotesize\ttfamily \hyperlink{structlog__expr_1_1exp__node}{exp\+\_\+node}$\ast$ log\+\_\+expr\+::root\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_quine___mc_cluskey___simplifier_8hpp}{Quine\+\_\+\+Mc\+Cluskey\+\_\+\+Simplifier.\+hpp}\end{DoxyCompactItemize}

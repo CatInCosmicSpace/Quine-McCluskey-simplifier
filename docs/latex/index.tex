@@ -1,0 +1,10 @@
+\hypertarget{index_intro_sec}{}\section{Короткие сведения}\label{index_intro_sec}
+Работа выполнена в рамках домашнего задания по дисциплине \char`\"{}Алгоритмы и структуры данных\char`\"{}, задание\+: \char`\"{}Напишите программу для получения минимальной ДНФ булевой
+  функции\char`\"{}.\hypertarget{index_install_sec}{}\section{Установка}\label{index_install_sec}
+\hypertarget{index_step0}{}\subsection{Шаг 0\+: подготовка}\label{index_step0}
+Убедитесь в наличии компилятора C++, установите себе cmake для упрощения сборки \hypertarget{index_step1}{}\subsection{Шаг 1\+: cmake}\label{index_step1}
+Соберите все с помощью команды cmake . в консоли. По умолчанию он сам выберет компилятор, но вы можете поставить и свой, добавив к команде флаг -\/G. Список доступных на вышей платформе компиляторов будет выведен при выполнении команды cmake -\/h \hypertarget{index_step2}{}\subsection{Шаг 2\+: g++?}\label{index_step2}
+Если у вас есть компилятор g++, а также утилита make или mingw32-\/make, то в качестве параметров установите \char`\"{}-\/\+G Min\+G\+W Makefile\char`\"{} (мной проверялось на Ubuntu и Windows 10) \hypertarget{index_step3}{}\subsection{Шаг 3\+: Осталось только make}\label{index_step3}
+Командой make или mingw32-\/make соберите проект \hypertarget{index_step4}{}\subsection{Пояснение\+: по умолчанию проект настроен на тесты.}\label{index_step4}
+Т.\+е. при сборке получится исполняемый файл Q\+M\+S\+\_\+test. Чтобы получился исполняемый проект, надо удалить /tests/init.cpp и /test/main.cpp и поместить Source.\+cpp в папку /tests. Source.\+cpp находится в папке /tools\hypertarget{index_else}{}\subsection{Я никогда не просил об этом}\label{index_else}
+Весь нужный код находится в файлах /include/\+Quine\+\_\+\+Mc\+Cluskey\+\_\+\+Simplifier.hpp, /include/\+Quine\+\_\+\+Mc\+Cluskey\+\_\+\+Simplifier.cpp и /tools/\+Source.cpp, которые соотвенно содержат объявление класса, определение класса и исполняемый код с функцией main(). Собрать это все вы можете и сами, если захотите. 
