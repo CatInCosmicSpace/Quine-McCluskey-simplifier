@@ -1,4 +1,5 @@
 #include "Quine_McCluskey_Simplifier.hpp"
+#include "log_expr.hpp"
 #include "catch.hpp"
 #include <fstream>
 
