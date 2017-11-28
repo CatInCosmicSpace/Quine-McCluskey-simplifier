@@ -64,7 +64,7 @@ class Quine_McCluskey_Simplifier {
 	</table>\n</center>
 	где 1 в ячейке ставится,
 	если импликант j покрывает единицу функции на наборе i,
-	0 - иначе.
+	0 - иначе
 	*/
 	std::vector<std::pair<std::vector<size_t>, bool>> table_;
 
