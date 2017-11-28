@@ -122,3 +122,27 @@ SCENARIO("QMS: init with vector, out sets", "[init(vector) -> sets]") {
 
 	REQUIRE(out.str() == (std::string)"-1-1 0-01 0-10 1000 ");
 }
+
+SCENARIO("QMS: test sets 1", "[ts1]") {
+	Quine_McCluskey_Simplifier QMS;
+	std::string in_s("2");
+	std::stringstream in_vs(in_s), out;
+	REQUIRE_NOTHROW(QMS.init(in_vs, true));
+	REQUIRE_NOTHROW(QMS.simplify());
+
+	QMS.print_mdnf(out);
+
+	REQUIRE(out.str() == (std::string)"10 ");
+}
+
+SCENARIO("QMS: test sets 2", "[ts2]") {
+	Quine_McCluskey_Simplifier QMS;
+	std::string in_s("0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15");
+	std::stringstream in_vs(in_s), out;
+	REQUIRE_NOTHROW(QMS.init(in_vs, true));
+	REQUIRE_NOTHROW(QMS.simplify());
+
+	QMS.print_mdnf(out);
+
+	REQUIRE(out.str() == (std::string)"---- ");
+}
