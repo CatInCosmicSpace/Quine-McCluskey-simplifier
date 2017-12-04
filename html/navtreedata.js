@@ -3,6 +3,10 @@ var NAVTREE =
   [ "Quine_McCluskey Simplifier", "index.html", [
     [ "Домашнее задание по АиСД", "index.html", [
       [ "Короткие сведения", "index.html#intro_sec", null ],
+      [ "Сложности", "index.html#complexity", [
+        [ "Сложность по времени", "index.html#time", null ],
+        [ "Сложность по памяти", "index.html#memory", null ]
+      ] ],
       [ "Установка", "index.html#install_sec", [
         [ "Шаг 0: подготовка", "index.html#step0", null ],
         [ "Шаг 1: cmake", "index.html#step1", null ],

@@ -959,7 +959,8 @@ $(document).ready(function(){initNavTree('class_quine___mc_cluskey___simplifier.
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Хранит разбиение наборов на группы по весу </p>
+<p>Хранит разбиение наборов на группы по весу <br />
+Так как это одна их двух наиболее сложных структур в этой реализации, то сложность по памяти будет \( O(n) \), где \( n \) - количество единиц функции </p>
 
 </div>
 </div>
@@ -1074,7 +1075,8 @@ $(document).ready(function(){initNavTree('class_quine___mc_cluskey___simplifier.
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Таблица покрытия простыми импликантами. table представляет собой таблицу, которая хранит наборы и импликанты в виде:<br />
+<p>Таблица покрытия простыми импликантами <br />
+table представляет собой таблицу, которая хранит наборы и импликанты в виде:<br />
 </p><center><a class="anchor" id="multi_row"></a>
 <table class="doxtable">
 <caption>Таблица покрытия</caption>
@@ -1090,7 +1092,8 @@ $(document).ready(function(){initNavTree('class_quine___mc_cluskey___simplifier.
 <td align="center">Импликант m</td><td align="center">0</td><td align="center">1</td><td align="center">...</td><td align="center">1 </td></tr>
 </table>
 <br />
-</center><p> где 1 в ячейке ставится, если импликант j покрывает единицу функции на наборе i, 0 - иначе </p>
+</center><p> где 1 в ячейке ставится, если импликант j покрывает единицу функции на наборе i, 0 - иначе <br />
+Это вторая наиболее сложная структура, которая занимает \( O(n \cdot m) \) памяти, где \( n \) - количество единиц функции, \( m \) - количество импликант функции </p>
 
 </div>
 </div>
