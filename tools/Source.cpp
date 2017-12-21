@@ -4,6 +4,7 @@
 #include <sstream>
 #include <vector>
 #include "Quine_McCluskey_Simplifier.hpp"
+#include "log_expr.hpp"
 
 int main(int argc, char* argv[]) {
 	if (argc == 2) {
